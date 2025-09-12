@@ -14,16 +14,17 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logowesecure.png"
 
 const navItemsLeft = [
   { name: "Home", path: "/", icon: <FaHome className="inline mr-1" /> },
-  { name: "About Us", path: "/about", icon: <FaInfoCircle className="inline mr-1" /> },
+  { name: "About ", path: "/about", icon: <FaInfoCircle className="inline mr-1" /> },
   { name: "Services", path: "/services", icon: <FaTruckMoving className="inline mr-1" /> },
 ];
 
 const navItemsRight = [
   { name: "Gallery", path: "/gallery", icon: <FaEnvelope className="inline mr-1" /> },
-  { name: "Contact Us", path: "/contact", icon: <FaPhoneAlt className="inline mr-1" /> },
+  { name: "Contact", path: "/contact", icon: <FaPhoneAlt className="inline mr-1" /> },
 ];
 
 const socialLinks = {
@@ -70,7 +71,7 @@ const ModernNavbar = () => {
       </div>
 
       {/* 🔹 Main Navbar */}
-      <nav className="w-full px-4 md:px-12 py-3 bg-white shadow-md relative z-50">
+      <nav className="w-full px-4 md:px-12 py-1 bg-white shadow-md relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Left Items */}
           <ul className="hidden md:flex gap-6 text-sm font-medium uppercase">
@@ -85,12 +86,14 @@ const ModernNavbar = () => {
           </ul>
 
           {/* Center Brand */}
-          <Link
-            to="/"
-            className="text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#2ECC71] to-[#004C8C] animate-pulse"
-          >
-            WeSecure Pest Control
-          </Link>
+        <Link to="/" className="flex items-center gap-2">
+  <img
+    src={logo} 
+    alt="WeSecure Pest Control Logo"
+    className="h-16 w-auto"
+  />
+</Link>
+
 
           {/* Right Items */}
           <div className="hidden md:flex items-center gap-6">

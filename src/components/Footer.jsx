@@ -48,11 +48,11 @@ export default function Footer() {
 
         {/* About Section */}
         <div className="flex flex-col space-y-4 text-black">
-          <p className="text-2xl md:text-4xl font-semibold text-green-600 tracking-wide">
+          <p className="text-2xl md:text-4xl font-raleway font-semibold text-green-900 tracking-wide">
             WeSecure Pest Control
           </p>
 
-          <p className="leading-relaxed text-black text-md mt-2">
+          <p className="leading-relaxed text-black text-lg mt-2">
             Professional pest control services to protect your home and business with safe, eco-friendly, and effective solutions.
           </p>
 
@@ -84,7 +84,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="text-black">
-          <h4 className="font-semibold text-3xl mb-4 text-green-700">Quick Links</h4>
+          <h4 className="font-semibold font-raleway text-3xl mb-4 text-green-900">Quick Links</h4>
           <ul className="space-y-3">
             {[
               ["Home", "/", <FaHome />],
@@ -104,7 +104,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <h4 className="font-semibold text-3xl mt-6 mb-2 text-green-600">Business Info</h4>
+          <h4 className="font-semibold font-raleway text-3xl mt-6 mb-2 text-green-900">Business Info</h4>
           <ul className="space-y-2 text-black">
             <li>UDYAM: DL-03-0066726</li>
             {/* <li>Address: Plot No. A-27 Ground Floor, Nearby Sona Modern Public School, Devli Road, Khanpur Village Extension, Sangam Vihar, New Delhi, Delhi 110080</li> */}
@@ -114,7 +114,7 @@ export default function Footer() {
 
         {/* Services */}
         <div className="text-black">
-          <h4 className="font-semibold text-3xl mb-4 text-green-600">Our Services</h4>
+          <h4 className="font-semibold font-raleway text-3xl mb-4 text-green-900">Our Services</h4>
           <ul className="space-y-3">
             {services.map(({ title, slug }, i) => (
               <li key={i} className="flex items-center gap-2">
@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Contact Info */}
         {/* Contact Info */}
 <div className="text-black">
-  <h4 className="font-semibold text-3xl mb-4 text-green-600">Contact Info</h4>
+  <h4 className="font-semibold text-3xl font-raleway mb-4 text-green-900">Contact Info</h4>
   <address className="not-italic leading-relaxed mb-2">
     Plot No. A-27 Ground Floor, Nearby Sona Modern Public School, Devli Road, Khanpur Village Extension, Sangam Vihar, New Delhi, Delhi 110080
   </address>
@@ -165,14 +165,16 @@ export default function Footer() {
   ))}
 
   <div className="mb-4 flex justify-start items-center">
+    <div>
     <Translator />
+    </div>
   </div>
 </div>
 
       </div>
 
       {/* Bottom Section */}
-      <div className="mt-10 text-center text-xs text-black border-t border-gray-400 pt-6 space-y-2 relative z-10">
+      <div className="mt-8 text-center text-xs text-black border-t border-gray-400 pt-6 space-y-2 relative z-10">
         <VisitorCounter />
         <p>© {new Date().getFullYear()} WeSecure Pest Control. All rights reserved.</p>
         <p>

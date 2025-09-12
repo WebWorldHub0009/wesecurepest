@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
           <div>
-            <h2 className="text-4xl font-bold font-[italiana] text-[#1B4332] mb-2">
+            <h2 className="text-4xl font-bold font-raleway text-[#1B4332] mb-2">
               Why Choose WeSecure Pest Control?
             </h2>
             <p className="text-lg text-gray-700 max-w-xl">
@@ -104,7 +104,7 @@ const Card = ({ reason }) => (
     </div>
 
     <div className="flex flex-col flex-1 justify-between">
-      <h3 className="text-xl font-[italiana] font-semibold mb-3">{reason.title}</h3>
+      <h3 className="text-xl font-raleway font-semibold mb-3">{reason.title}</h3>
       <p className="text-sm leading-relaxed">{reason.desc}</p>
     </div>
 

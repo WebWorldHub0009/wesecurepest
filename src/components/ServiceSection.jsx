@@ -1,76 +1,75 @@
 // src/components/ServicesSection.jsx
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import { Link } from "react-router-dom";
-
+import { Pagination, Autoplay, Navigation } from "swiper/modules"; 
+import  Link from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation"; 
 
-// Replace these with real pest control images
-import termiteImg from "../assets/home/wp1.jpg";
-// import cockroachImg from "../assets/pest/cockroach.jpg";
-// import ratsImg from "../assets/pest/rats.jpg";
-// import fliesImg from "../assets/pest/flies.jpg";
-// import bedbugImg from "../assets/pest/bedbug.jpg";
-// import silverfishImg from "../assets/pest/silverfish.jpg";
-// import antsImg from "../assets/pest/ants.jpg";
-// import lizardImg from "../assets/pest/lizard.jpg";
-// import snakeImg from "../assets/pest/snake.jpg";
+import ter from "../assets/service/t.webp";
+import cock from "../assets/service/c.webp";
+import rat from "../assets/service/rat.webp";
+import fly from "../assets/service/flies.webp";
+import bed from "../assets/service/bed.webp";
+import silver from "../assets/service/silver.webp";
+import ant from "../assets/service/ant.webp";
+import liza from "../assets/service/lizard.avif";
+import snake from "../assets/service/snake.webp";
 
 const services = [
   {
     title: "Termite Control",
     slug: "termite-control",
-    image: termiteImg,
+    image: ter,
     desc: "Specialized termite treatments to protect your property from structural damage, with long-term prevention strategies.",
   },
   {
     title: "Cockroach Control",
     slug: "cockroach-control",
-    image: termiteImg,
+    image: cock,
     desc: "Cockroaches are bad for your business & they spread diseases. Protect your family & brand name.",
   },
   {
     title: "Rats Control",
     slug: "rats-control",
-    image: termiteImg,
+    image: rat,
     desc: "Rats & mice can ruin your business and damage your brand identity. Stop them before they wreak havoc.",
   },
   {
     title: "Flies Control",
     slug: "flies-control",
-    image: termiteImg,
+    image: fly,
     desc: "Got a lot of flies? They can be hazardous to humans. Stop their spread now.",
   },
   {
     title: "Bedbugs Treatment",
     slug: "bedbugs-treatment",
-    image: termiteImg,
+    image: bed,
     desc: "Once they are in, they are hard to get rid of. Prevent bedbug infestation effectively.",
   },
   {
     title: "Silverfish Control",
     slug: "silverfish-control",
-    image: termiteImg,
+    image: silver,
     desc: "Silverfish may damage fabrics like cotton, linen & silk. Protect your property from them.",
   },
   {
     title: "Ants Control",
     slug: "ants-control",
-    image: termiteImg,
+    image: ant,
     desc: "Ants are bad for your business & brand image. Rid your properties of ants efficiently.",
   },
   {
     title: "Lizard Control",
     slug: "lizard-control",
-    image: termiteImg,
+    image: liza,
     desc: "Providing lizard control services in factories, societies, malls, hospitals, schools, and more.",
   },
   {
     title: "Snake Control",
     slug: "snake-control",
-    image: termiteImg,
+    image: snake,
     desc: "Unique snake repellent system ensures snakes stay away from your surroundings.",
   },
 ];
@@ -78,28 +77,27 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="relative bg-[#1C1C1C] py-10 overflow-hidden">
-   
-
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
-          <h2 className="font-cursive1 text-4xl md:text-6xl text-white ">
+          <h2 className="font-raleway text-4xl md:text-6xl text-white ">
             Our <span className="text-[#2ECC71]">Pest Control Services</span>
           </h2>
           <p className="mt-6 font-body text-gray-300 leading-relaxed text-base md:text-lg">
-            At <span className="text-[#2ECC71]">WeSecure Pest Control</span>, we provide
-            advanced, safe, and eco-friendly pest management solutions for homes,
-            businesses, and industries.
+            At <span className="text-[#2ECC71]">WeSecure Pest Control</span>, we
+            provide advanced, safe, and eco-friendly pest management solutions
+            for homes, businesses, and industries.
           </p>
         </div>
 
         {/* Swiper Slider */}
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, Navigation]} // ✅ Navigation added
           spaceBetween={30}
           slidesPerView={3}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
+          navigation={true} // ✅ Enables manual prev/next
           loop={true}
           breakpoints={{
             320: { slidesPerView: 1 },
@@ -115,6 +113,7 @@ export default function ServicesSection() {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy" // ✅ Lazy load for performance
                     className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
@@ -134,9 +133,11 @@ export default function ServicesSection() {
                     <p className="font-body text-sm text-gray-300 mt-2 opacity-90">
                       {service.desc}
                     </p>
-                    <button className="mt-3 px-5 py-2 rounded-full bg-[#2ECC71] text-black font-semibold shadow-md hover:bg-green-600 transition">
+                    <Link to="/contact">
+                    <button className="mt-3 cursor-pointer px-5 py-2 rounded-full bg-[#2ECC71] text-black font-semibold shadow-md hover:bg-green-600 transition">
                       Book Now
                     </button>
+                    </Link>
                   </div>
                 </div>
               </Link>
