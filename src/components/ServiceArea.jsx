@@ -90,10 +90,10 @@ const ServiceAreas = () => {
               <h3 className="text-2xl font-bold text-[#3CB371] mb-4 drop-shadow-md">
                 {selectedArea}
               </h3>
-              <p className="text-gray-800 leading-relaxed text-base">
+              <p className="text-white leading-relaxed text-base">
                 At <span className="text-[#3CB371] font-semibold">We Secure Pest Control</span>,  
                 we bring modern, eco-friendly pest control solutions to{" "}
-                <span className="text-gray-800 font-medium">{selectedArea}</span>.  
+                <span className="text-white font-medium">{selectedArea}</span>.  
                 From termite and rodent control to bed bugs, cockroaches, and mosquitoes –  
                 our expert team ensures clean, safe, and pest-free living.
               </p>
