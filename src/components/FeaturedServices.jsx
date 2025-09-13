@@ -2,8 +2,7 @@
 import React from "react";
 import { FaHome, FaIndustry, FaBuilding } from "react-icons/fa";
 import img1 from "../assets/home/wp1.jpg";
-import img2 from "../assets/home/wp1.jpg";
-import img3 from "../assets/home/wp1.jpg";
+
 import bgImg from "../assets/home/bgw.jpg"; 
 
 const services = [
@@ -16,14 +15,14 @@ const services = [
   },
   {
     title: "Industrial Solutions",
-    image: img2,
+    image: img1,
     icon: <FaIndustry />,
     description:
       "Certified industrial pest control to protect business operations with long-term prevention.",
   },
   {
     title: "Commercial Solutions",
-    image: img3,
+    image: img1,
     icon: <FaBuilding />,
     description:
       "Comprehensive commercial pest management for offices, warehouses, and retail spaces.",

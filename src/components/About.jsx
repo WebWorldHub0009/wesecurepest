@@ -6,10 +6,6 @@ import aboutImg from "../assets/home/wp1.jpg";
 export default function AboutSection() {
   return (
     <section className="relative bg-gradient-to-b from-white via-[#F9F9F9] to-white px-6 md:px-12 py-10 overflow-hidden font-opensans">
- 
-
-
-
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="space-y-8">
